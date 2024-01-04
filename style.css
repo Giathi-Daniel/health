@@ -511,7 +511,7 @@ html {
 /********************************\
 |========== MEDIA QUERIES ======|
 \********************************/
-@media (max-inline-size: 991px) {
+@media (max-width: 991px) {
     html {
         font-size: 55%;
     }
@@ -523,7 +523,7 @@ html {
     }
 }
 
-@media (max-inline-size: 768px) {
+@media (max-width: 768px) {
     #menu-btn {
         display: initial;
     }
@@ -552,7 +552,7 @@ html {
         margin: 2.5rem;
     }
 }
-@media (max-inline-size: 450px) {
+@media (max-width: 450px) {
     html {
         font-size: 50%;
     }
