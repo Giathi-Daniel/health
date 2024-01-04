@@ -353,7 +353,7 @@ html {
 \********************************/
 .review .box-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 2rem;
 }
 .review .box-container .box {
@@ -387,17 +387,17 @@ html {
     color: var(--light-color);
     line-height: 1.8;
     font-size: 1.6rem;
-    padding-top: 4rem;
+    padding-block-start: 4rem;
 }
 .review .box-container .box::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 50%;
+    inset-block-start: 0;
+    inset-inline-start: 50%;
     transform: translateX(-50%);
     background: var(--green);
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
+    border-end-start-radius: 50%;
+    border-end-end-radius: 50%;
     block-size: 12rem;
     inline-size: 120%;
     z-index: -1;
@@ -407,11 +407,101 @@ html {
 /*******************************\
 |========== BLOGS STYLING ======|
 \*******************************/
+.blogs .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+.blogs .box-container .box {
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    padding: 2rem;
+}
+.blogs .box-container .box .image {
+    block-size: 20rem;
+    overflow: hidden;
+    border-radius: .5rem;
+}
+.blogs .box-container .box .image img {
+    block-size: 100%;
+    inline-size: 100%;
+    object-fit: cover;
+}
+.blogs .box-container .box:hover .image img {
+    transform: scale(1.2);
+}
+.blogs .box-container .box .content {
+    padding-block-start: 1rem;
+}
+.blogs .box-container .box .content .icon {
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-self: space-between;
+}
+.blogs .box-container .box .content .icon a {
+    font-size: 1.4rem;
+    color: var(--light-color);
+}
+.blogs .box-container .box .content .icon a:hover {
+    color: var(--green);
+}
+.blogs .box-container .box .content .icon a i {
+    padding-inline-end: .5rem;
+    color: var(--green);
+}
+.blogs .box-container .box .content .icon h3 {
+    color: var(--black);
+    font-size: 3rem;
+}
+.blogs .box-container .box .content p {
+    color: var(--light-color);
+    font-size: 1.5rem;
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+
 
 
 /********************************\
 |========== FOOTER STYLING ======|
 \********************************/
+footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+.footer .box-container .box h3 {
+    font-size: 2.5rem;
+    color: var(--black);
+    padding: 1rem 0;
+}
+.footer .box-container .box a {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--light-color);
+    padding: 1rem 0;
+}
+.footer .box-container .box a i {
+    padding-inline-end: .5rem;
+    color: var(--green);
+}
+.footer .box-container .box a:hover i {
+    padding-inline-end: 2rem;
+}
+.footer p {
+    padding: 1rem;
+    padding-block-start: 2rem;
+    margin-block-start: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--light-color);
+    border-block-start: .1rem solid rgba(0, 0, 0, .1);
+}
+.footer span {
+    color: var(--green);
+}
 
 
 
