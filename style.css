@@ -29,7 +29,7 @@ section:nth-child(even) {
 
 .heading {
     text-align: center;
-    padding-bottom: 2rem;
+    padding-block-end: 2rem;
     text-shadow: var(--text-shadow);
     text-transform: uppercase;
     color: var(--black);
@@ -208,7 +208,7 @@ html {
 .services .box-container .box i {
     color: var(--green);
     font-size: 5rem;
-    padding-bottom: .5rem;
+    padding-block-end: .5rem;
 }
 .services .box-container .box h3{
     color: var(--black);
@@ -257,16 +257,151 @@ html {
 /*********************************\
 |========== DOCTORS STYLING ======|
 \*********************************/
+.doctors .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap: 2rem;
+}
+.doctors .box-container .box {
+    text-align: center;
+    background: #fff;
+    border-radius: .5rem;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+}
+.doctors .box-container .box img {
+    block-size: 20rem;
+    border: var(--border);
+    border-radius: .5rem;
+    margin-block-start: 1rem;
+    margin-block-end: 1rem;
+}
+.doctors .box-container .box h3 {
+    color: var(--black);
+    font-size: 2.5rem;
+}
+.doctors .box-container .box span {
+    color: var(--green);
+    font-size: 1.5rem;
+}
+.doctors .box-container .box .share {
+   padding-block-start: 2rem;
+}
+.doctors .box-container .box .share a {
+   block-size: 5rem;
+   inline-size: 5rem;
+   line-height: 4.5rem;
+   font-size: 2rem;
+   color: var(--green);
+   border-radius: .5rem;
+   border: var(--border);
+   margin: .3rem;
+}
+.doctors .box-container .box .share a:hover {
+    background: var(--green);
+    color: #fff;
+    box-shadow: var(--box-shadow);
+}
 
 
 /******************************\
 |========== BOOK STYLING ======|
 \******************************/
+.book .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.book .row .image {
+    flex: 1 1 45rem;
+}
+.book .row .image img {
+    inline-size: 100%;
+}
+.book .row form {
+    flex:  1 1 45rem;
+    background: #fff;
+    border-radius: .5rem;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+}
+.book .row form h3 {
+    color: var(--black);
+    padding-block-end: 1rem;
+    font-size: 3rem;
+}
+.book .row form .box {
+    inline-size: 100%;
+    margin: .7rem 0;
+    border-radius: .5rem;
+    border: var(--border);
+    font-size: 1.6rem;
+    color: var(--black);
+    text-transform: none;
+    padding: 1rem;
+}
+.book .row form .btn {
+    padding: 1rem 4rem;
+}
 
 
 /********************************\
 |========== REVIEW STYLING ======|
 \********************************/
+.review .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap: 2rem;
+}
+.review .box-container .box {
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    padding: 2.5rem;
+    background: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+.review .box-container .box img {
+    block-size: 10rem;
+    inline-size: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: .5rem solid#ffF;   
+}
+.review .box-container .box h3 {
+    color: #ffF;
+    font-size: 2.2rem;
+    padding: .5rem 0;
+}
+.review .box-container .box .stars i {
+    color: yellow;
+    font-size: 1.5rem;
+}
+.review .box-container .box .text {
+    color: var(--light-color);
+    line-height: 1.8;
+    font-size: 1.6rem;
+    padding-top: 4rem;
+}
+.review .box-container .box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--green);
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    block-size: 12rem;
+    inline-size: 120%;
+    z-index: -1;
+}
 
 
 /*******************************\
