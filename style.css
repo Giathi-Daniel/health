@@ -467,9 +467,9 @@ html {
 /********************************\
 |========== FOOTER STYLING ======|
 \********************************/
-footer .box-container{
+.footer .box-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: 2rem;
 }
 .footer .box-container .box h3 {
@@ -483,7 +483,8 @@ footer .box-container{
     color: var(--light-color);
     padding: 1rem 0;
 }
-.footer .box-container .box a i {
+.footer .box-container .box a i,
+.footer .box-container .box a.fab {
     padding-inline-end: .5rem;
     color: var(--green);
 }
